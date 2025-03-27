@@ -61,4 +61,11 @@ public class Mechanisms {
         elevator.setLength(position.getValue().in(Rotations));
         SmartDashboard.putData("mech2d", mech); // Creates mech2d in SmartDashboard
     }
+
+    public void update(double position, double velocity) {
+        VelocityMech.setLength(velocity/10); // Divide by 120 to scale motion to fit in the window
+        elevator.setLength(position/5);
+        SmartDashboard.putData("mech2d", mech); // Creates mech2d in SmartDashboard
+    }
+
 }
